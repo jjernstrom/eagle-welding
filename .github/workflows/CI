@@ -8,15 +8,12 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 23
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
+      - uses: actions/check  out@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 23
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
