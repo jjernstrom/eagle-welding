@@ -1,5 +1,5 @@
-import { Box, useTheme } from '@mui/material';
-import { motion } from 'framer-motion';
+import { Box, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 
 interface ServiceImageProps {
   src: string;
@@ -22,15 +22,15 @@ export const ServiceImage = ({ src, alt, delay = 0 }: ServiceImageProps) => {
         src={src}
         alt={alt}
         sx={{
-          width: '100%',
-          height: { xs: '300px', md: '400px' },
-          objectFit: 'cover',
+          width: "100%",
+          height: { xs: "300px", md: "400px" },
+          objectFit: "cover",
           borderRadius: 2,
           boxShadow: theme.shadows[4],
-          transition: 'transform 0.3s ease-in-out',
-          '&:hover': {
-            transform: 'scale(1.02)',
-          }
+          transition: "transform 0.3s ease-in-out",
+          "&:hover": {
+            transform: "scale(1.02)",
+          },
         }}
       />
     </motion.div>

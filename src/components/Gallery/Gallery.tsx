@@ -1,22 +1,22 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { Box, Container, Grid, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const projects = [
   {
-    title: 'Custom Railing',
-    description: 'Decorative outdoor railing installation',
-    image: '/src/assets/DanWelding.jpg', // Placeholder - replace with actual project images
+    title: "Custom Railing",
+    description: "Decorative outdoor railing installation",
+    image: "/src/assets/DanWelding.jpg", // Placeholder - replace with actual project images
   },
   {
-    title: 'Equipment Repair',
-    description: 'Heavy machinery welding repair',
-    image: '/src/assets/DanWelding.jpg',
+    title: "Equipment Repair",
+    description: "Heavy machinery welding repair",
+    image: "/src/assets/DanWelding.jpg",
   },
   {
-    title: 'Metal Art',
-    description: 'Custom metal sculpture',
-    image: '/src/assets/DanWelding.jpg',
+    title: "Metal Art",
+    description: "Custom metal sculpture",
+    image: "/src/assets/DanWelding.jpg",
   },
 ];
 
@@ -27,12 +27,22 @@ export const Gallery = () => {
   });
 
   return (
-    <Box sx={{ py: 8, bgcolor: 'background.default' }}>
+    <Box sx={{ py: 8, bgcolor: "background.default" }}>
       <Container>
-        <Typography variant="h2" color="primary" textAlign="center" gutterBottom>
+        <Typography
+          variant="h2"
+          color="primary"
+          textAlign="center"
+          gutterBottom
+        >
           Our Work
         </Typography>
-        <Typography variant="h6" color="text.secondary" textAlign="center" mb={4}>
+        <Typography
+          variant="h6"
+          color="text.secondary"
+          textAlign="center"
+          mb={4}
+        >
           Browse through some of our recent projects
         </Typography>
         <Grid container spacing={4} ref={ref}>
@@ -45,11 +55,11 @@ export const Gallery = () => {
               >
                 <Box
                   sx={{
-                    position: 'relative',
-                    overflow: 'hidden',
+                    position: "relative",
+                    overflow: "hidden",
                     borderRadius: 2,
                     boxShadow: 3,
-                    '&:hover .overlay': {
+                    "&:hover .overlay": {
                       opacity: 1,
                     },
                   }}
@@ -59,23 +69,23 @@ export const Gallery = () => {
                     src={project.image}
                     alt={project.title}
                     sx={{
-                      width: '100%',
+                      width: "100%",
                       height: 300,
-                      objectFit: 'cover',
+                      objectFit: "cover",
                     }}
                   />
                   <Box
                     className="overlay"
                     sx={{
-                      position: 'absolute',
+                      position: "absolute",
                       bottom: 0,
                       left: 0,
                       right: 0,
-                      bgcolor: 'rgba(0, 0, 0, 0.7)',
-                      color: 'white',
+                      bgcolor: "rgba(0, 0, 0, 0.7)",
+                      color: "white",
                       p: 2,
                       opacity: 0,
-                      transition: 'opacity 0.3s',
+                      transition: "opacity 0.3s",
                     }}
                   >
                     <Typography variant="h6" gutterBottom>

@@ -1,6 +1,6 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import { Box, Container, Grid, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 export const About = () => {
   return (
@@ -54,8 +54,8 @@ export const About = () => {
                   src="/src/assets/Dan_Welding.jpg"
                   alt="Eagle Welding workshop"
                   sx={{
-                    width: '100%',
-                    height: 'auto',
+                    width: "100%",
+                    height: "auto",
                     borderRadius: 2,
                     boxShadow: 3,
                   }}

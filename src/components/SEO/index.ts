@@ -1,2 +1,2 @@
-export * from './HomeSchema';
-export * from './ServiceSchema';
+export * from "./HomeSchema";
+export * from "./ServiceSchema";

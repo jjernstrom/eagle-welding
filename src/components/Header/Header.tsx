@@ -9,12 +9,12 @@ import {
   Stack,
   Toolbar,
   useTheme,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import eagleLogo from '@/assets/EagleLogo.png';
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import eagleLogo from "@/assets/EagleLogo.png";
 
 export const Header = () => {
   const theme = useTheme();
@@ -58,32 +58,39 @@ export const Header = () => {
               alt="Eagle Welding Logo"
               sx={{
                 height: { xs: 40, sm: 50 },
-                width: 'auto',
-                cursor: 'pointer',
-                transition: 'transform 0.3s ease',
-                '&:hover': {
-                  transform: 'scale(1.05)',
+                width: "auto",
+                cursor: "pointer",
+                transition: "transform 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
                 },
               }}
-              onClick={() => navigate('/')}
+              onClick={() => navigate("/")}
             />
           </motion.div>
 
           {/* Mobile Menu */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, ml: 'auto', gap: 1, alignItems: 'center' }}>
+          <Box
+            sx={{
+              display: { xs: "flex", md: "none" },
+              ml: "auto",
+              gap: 1,
+              alignItems: "center",
+            }}
+          >
             <Button
               variant="contained"
               color="secondary"
               size="small"
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate("/contact")}
               sx={{
                 px: 2,
                 py: 1,
-                fontSize: '0.875rem',
+                fontSize: "0.875rem",
                 background: `linear-gradient(45deg, ${theme.palette.secondary.dark} 30%, ${theme.palette.secondary.main} 90%)`,
                 color: theme.palette.primary.main,
-                fontWeight: 'bold',
-                '&:hover': {
+                fontWeight: "bold",
+                "&:hover": {
                   background: `linear-gradient(45deg, ${theme.palette.secondary.main} 30%, ${theme.palette.secondary.light} 90%)`,
                 },
               }}
@@ -104,32 +111,30 @@ export const Header = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
               sx={{
-                '& .MuiPaper-root': {
+                "& .MuiPaper-root": {
                   backgroundColor: theme.palette.primary.main,
-                  color: 'white',
+                  color: "white",
                 },
               }}
             >
-              {['/', '/services', '/about', '/gallery'].map(
-                (path) => (
-                  <MenuItem
-                    key={path}
-                    onClick={() => handleNavigate(path)}
-                    sx={{
-                      backgroundColor: isActive(path)
-                        ? `${theme.palette.primary.light} !important`
-                        : 'transparent',
-                      '&:hover': {
-                        backgroundColor: theme.palette.primary.light,
-                      },
-                    }}
-                  >
-                    {path === '/'
-                      ? 'Home'
-                      : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-                  </MenuItem>
-                )
-              )}
+              {["/", "/services", "/about", "/gallery"].map((path) => (
+                <MenuItem
+                  key={path}
+                  onClick={() => handleNavigate(path)}
+                  sx={{
+                    backgroundColor: isActive(path)
+                      ? `${theme.palette.primary.light} !important`
+                      : "transparent",
+                    "&:hover": {
+                      backgroundColor: theme.palette.primary.light,
+                    },
+                  }}
+                >
+                  {path === "/"
+                    ? "Home"
+                    : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
 
@@ -139,53 +144,53 @@ export const Header = () => {
             spacing={1}
             ml="auto"
             sx={{
-              display: { xs: 'none', md: 'flex' },
-              alignItems: 'center',
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
             }}
           >
-            {['/', '/services', '/about', '/gallery'].map((path) => (
+            {["/", "/services", "/about", "/gallery"].map((path) => (
               <Button
                 key={path}
                 onClick={() => navigate(path)}
                 sx={{
-                  color: 'white',
-                  position: 'relative',
-                  '&::after': {
+                  color: "white",
+                  position: "relative",
+                  "&::after": {
                     content: '""',
-                    position: 'absolute',
+                    position: "absolute",
                     bottom: 0,
-                    left: '50%',
-                    width: isActive(path) ? '100%' : '0%',
-                    height: '2px',
+                    left: "50%",
+                    width: isActive(path) ? "100%" : "0%",
+                    height: "2px",
                     backgroundColor: theme.palette.secondary.main,
-                    transition: 'all 0.3s ease',
-                    transform: 'translateX(-50%)',
+                    transition: "all 0.3s ease",
+                    transform: "translateX(-50%)",
                   },
-                  '&:hover::after': {
-                    width: '100%',
+                  "&:hover::after": {
+                    width: "100%",
                   },
-                  '&:hover': {
-                    backgroundColor: 'transparent',
+                  "&:hover": {
+                    backgroundColor: "transparent",
                     color: theme.palette.secondary.light,
                   },
                 }}
               >
-                {path === '/'
-                  ? 'Home'
+                {path === "/"
+                  ? "Home"
                   : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
               </Button>
             ))}
             <Button
               variant="contained"
               color="secondary"
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate("/contact")}
               sx={{
                 ml: 2,
                 px: 3,
                 background: `linear-gradient(45deg, ${theme.palette.secondary.dark} 30%, ${theme.palette.secondary.main} 90%)`,
                 color: theme.palette.primary.main,
-                fontWeight: 'bold',
-                '&:hover': {
+                fontWeight: "bold",
+                "&:hover": {
                   background: `linear-gradient(45deg, ${theme.palette.secondary.main} 30%, ${theme.palette.secondary.light} 90%)`,
                 },
               }}

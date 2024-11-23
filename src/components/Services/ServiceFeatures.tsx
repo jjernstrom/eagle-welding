@@ -1,5 +1,5 @@
-import { Box, Grid, Typography, useTheme } from '@mui/material';
-import { motion } from 'framer-motion';
+import { Box, Grid, Typography, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 
 interface ServiceFeaturesProps {
   features: string[];
@@ -7,7 +7,11 @@ interface ServiceFeaturesProps {
   delay?: number;
 }
 
-export const ServiceFeatures = ({ features, title, delay = 0 }: ServiceFeaturesProps) => {
+export const ServiceFeatures = ({
+  features,
+  title,
+  delay = 0,
+}: ServiceFeaturesProps) => {
   const theme = useTheme();
 
   return (
@@ -18,22 +22,22 @@ export const ServiceFeatures = ({ features, title, delay = 0 }: ServiceFeaturesP
         transition={{ duration: 0.5, delay }}
         viewport={{ once: true }}
       >
-        <Typography 
-          variant="h6" 
-          color="secondary" 
+        <Typography
+          variant="h6"
+          color="secondary"
           gutterBottom
-          sx={{ 
-            fontWeight: 'bold',
-            display: 'flex',
-            alignItems: 'center',
-            '&::before': {
+          sx={{
+            fontWeight: "bold",
+            display: "flex",
+            alignItems: "center",
+            "&::before": {
               content: '""',
               width: 4,
               height: 24,
               backgroundColor: theme.palette.secondary.main,
               marginRight: 2,
               borderRadius: 1,
-            }
+            },
           }}
         >
           {title}
@@ -44,22 +48,22 @@ export const ServiceFeatures = ({ features, title, delay = 0 }: ServiceFeaturesP
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: delay + (index * 0.1) }}
+                transition={{ duration: 0.3, delay: delay + index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Typography 
-                  variant="body1" 
-                  sx={{ 
+                <Typography
+                  variant="body1"
+                  sx={{
                     color: theme.palette.text.secondary,
-                    display: 'flex',
-                    alignItems: 'center',
-                    '&::before': {
+                    display: "flex",
+                    alignItems: "center",
+                    "&::before": {
                       content: '"•"',
                       color: theme.palette.secondary.main,
-                      fontSize: '1.5rem',
+                      fontSize: "1.5rem",
                       marginRight: 1,
                       lineHeight: 1,
-                    }
+                    },
                   }}
                 >
                   {feature}
