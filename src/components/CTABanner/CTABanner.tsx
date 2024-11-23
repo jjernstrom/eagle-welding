@@ -77,7 +77,7 @@ export const CTABanner = () => {
                   maxWidth: 500,
                 }}
               >
-                Get a free quote today and bring your vision to life with our
+                Get a free estimate today and bring your vision to life with our
                 expert welding services. Professional solutions tailored to your
                 needs.
               </Typography>
@@ -111,7 +111,7 @@ export const CTABanner = () => {
                     },
                   }}
                 >
-                  Get Free Quote
+                  Get Free Estimate
                 </Button>
               </motion.div>
               <motion.div

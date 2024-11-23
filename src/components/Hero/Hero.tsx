@@ -149,7 +149,7 @@ export const Hero = () => {
                     width: { xs: "100%", sm: "auto" },
                   }}
                 >
-                  Get a Free Quote
+                  Get a Free Estimate
                 </Button>
               </motion.div>
               <motion.div
