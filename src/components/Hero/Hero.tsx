@@ -8,8 +8,8 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import eagleWorking from "@/assets/Eagle_Welding_working.jpg";
-import eagleLogo from "@/assets/EagleLogo.png";
+import eagleWorking from "../../assets/Eagle_Welding_working.jpg";
+import eagleLogo from "../../assets/EagleLogo.png";
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -183,28 +183,30 @@ export const Hero = () => {
               </motion.div>
             </Stack>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            style={{
-              flex: 1,
-              maxWidth: 400,
-              width: "100%",
-              display: { xs: "none", lg: "block" },
-            }}
-          >
-            <Box
-              component="img"
-              src={eagleLogo}
-              alt="Eagle Welding Logo"
-              sx={{
+          {useTheme().breakpoints.up('lg') && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              style={{ 
+                flex: 1, 
+                maxWidth: 400, 
                 width: "100%",
-                height: "auto",
-                filter: "drop-shadow(0 0 20px rgba(218, 165, 32, 0.3))",
+                display: "block"
               }}
-            />
-          </motion.div>
+            >
+              <Box
+                component="img"
+                src={eagleLogo}
+                alt="Eagle Welding Logo"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  filter: "drop-shadow(0 0 20px rgba(218, 165, 32, 0.3))",
+                }}
+              />
+            </motion.div>
+          )}
         </Stack>
       </Container>
     </Box>
