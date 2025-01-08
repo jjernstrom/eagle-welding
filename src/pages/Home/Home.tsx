@@ -1,6 +1,7 @@
 import { Container, Stack, Typography } from "@mui/material";
 import EagleLogo from "../../assets/EagleLogo.png";
 import DanWelding from "../../assets/DanWelding.jpg";
+import EagleLogo from "@/assets/EagleLogo.png";
 
 export const Home = () => {
   return (
