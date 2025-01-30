@@ -3,9 +3,9 @@ import HeroBackground from "@/assets/DanWelding2.jpg";
 import EagleLogo from "@/assets/EagleLogo.png";
 
 const title = "Where Metal Meets Craftsmanship";
-const subTitle = "Expert Welding Services in Monroe County, PA";
+const subTitle = "Mobile Welding Services in Monroe County, PA";
 const bodyText =
-  "Professional Mobile Welding and Fabrication in Monroe County, PA. Quality craftsmanship brought directly to you.";
+  "Professional mobile welding and fabrication brought directly to you.";
 
 export const Hero = () => {
   return (
@@ -27,8 +27,8 @@ export const Hero = () => {
       }}
     >
       <Stack
+        direction="row"
         sx={{
-          direction: "row",
           maxWidth: 1200,
           height: "100%",
           display: "flex",
@@ -38,8 +38,9 @@ export const Hero = () => {
         }}
       >
         <Stack
+          textAlign={{ xs: "center", md: "left" }}
           sx={{
-            maxWidth: 600,
+            maxWidth: 500,
             margin: 2,
           }}
         >
@@ -70,7 +71,7 @@ export const Hero = () => {
             display: { xs: "none", sm: "none", md: "block" },
           }}
         >
-          <img src={EagleLogo} height="150px" />
+          <img src={EagleLogo} height={150} />
         </Box>
       </Stack>
     </Box>
