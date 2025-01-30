@@ -66,9 +66,9 @@ export const Services = () => {
       </Stack>
       <Stack
         maxWidth={1200}
-        direction={{xs: "column", md: "row" }}
+        direction={{ xs: "column", md: "row" }}
         sx={{
-          alignItems: 'center',
+          alignItems: "center",
           justifyContent: "space-between",
           marginTop: 4,
           marginX: "auto",

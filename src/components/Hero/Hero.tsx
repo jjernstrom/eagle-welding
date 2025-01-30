@@ -38,7 +38,7 @@ export const Hero = () => {
         }}
       >
         <Stack
-          textAlign={{xs: 'center', md: 'left'}}
+          textAlign={{ xs: "center", md: "left" }}
           sx={{
             maxWidth: 500,
             margin: 2,

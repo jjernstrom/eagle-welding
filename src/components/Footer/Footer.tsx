@@ -34,7 +34,10 @@ export const Footer = () => {
               Bringing expert craftsmanship directly to you.
             </Typography>
           </Stack>
-          <Stack textAlign={{xs: 'center', md: 'left'}} marginTop={{ xs: 2, md: 0}}>
+          <Stack
+            textAlign={{ xs: "center", md: "left" }}
+            marginTop={{ xs: 2, md: 0 }}
+          >
             <Typography variant="h6" color="#DAA520">
               Contact Info
             </Typography>
@@ -44,7 +47,10 @@ export const Footer = () => {
               Monroe County, PA
             </Typography>
           </Stack>
-          <Stack textAlign={{xs: 'center', md: 'left'}} marginTop={{ xs: 2, md: 0}}>
+          <Stack
+            textAlign={{ xs: "center", md: "left" }}
+            marginTop={{ xs: 2, md: 0 }}
+          >
             <Typography variant="h6" color="#DAA520">
               Hours of Operation
             </Typography>
@@ -72,14 +78,14 @@ export const Footer = () => {
           color="#FFFFFF"
           variant="body1"
           sx={{
-            gap: '.25em',
+            gap: ".25em",
             "& a": {
               color: "#DAA520",
               textDecoration: "none",
               "&:hover": {
                 color: "#FFFFFF",
                 textDecoration: "underline",
-              }
+              },
             },
           }}
         >
